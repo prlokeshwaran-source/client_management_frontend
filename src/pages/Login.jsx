@@ -58,6 +58,9 @@ export default function Login() {
       }
     } finally {
       setIsLoading(false);
+      setEmail('');
+      setPassword('');
+      setShowPassword(false);
     }
   };
 
@@ -81,6 +84,7 @@ export default function Login() {
               placeholder="you@company.com"
               required
               disabled={isLoading}
+              autoComplete="off"
             />
           </label>
           
@@ -94,6 +98,7 @@ export default function Login() {
                 placeholder="Enter your password"
                 required
                 disabled={isLoading}
+                autoComplete="new-password"
               />
               <button
                 type="button"
